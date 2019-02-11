@@ -11,11 +11,6 @@
 ### User Stories
 ```
 As a User,
-So that my money can be stored,
-I want to open an account.
-```
-```
-As a User,
 So that I can keep my money in one place,
 I want to be able to deposit.
 ```
