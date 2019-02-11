@@ -1,4 +1,4 @@
-#Bank Tech Test in JavaScript
+# Bank Tech Test in JavaScript
 
 ### Installation
 
