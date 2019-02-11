@@ -4,6 +4,10 @@ class Account {
   };
 
   deposit (num) {
-    this.balance += num 
+    this.balance += num;
+  };
+
+  withdraw (num) {
+    this.balance -= num;
   };
 };
