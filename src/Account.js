@@ -1,6 +1,6 @@
 class Account {
   constructor () {
-    this.balance = 0;
+    this.balance = 0.00;
   };
 
   deposit (num) {

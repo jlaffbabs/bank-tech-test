@@ -6,6 +6,6 @@ describe ('Account', function () {
   });
 
   it('Account should start empty', function () {
-    expect(account.balance).toEqual(0);
+    expect(account.balance).toEqual(0.00);
   });
 });
