@@ -24,3 +24,8 @@ As a User,
 So that I can keep track of how much money I have,
 I want to see my Account Statement.
 ```
+```
+As a User,
+So that I can know when I am making transactions,
+I want my withdrawals and deposits to be tied to dates.
+```
