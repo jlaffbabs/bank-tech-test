@@ -8,6 +8,6 @@ describe('Transactions are attached to a date', function () {
   it('A transaction should have a date attached for statement', function () {
     account.deposit(320.00)
     var today = new Date()
-    expect(account.statement()).toContain(today.toLocaleDateString('en-GB'))
+    expect(account.statementCreate()).toContain(today.toLocaleDateString('en-GB'))
   })
 })

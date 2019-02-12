@@ -2,6 +2,7 @@ class Account {
   constructor () {
     this.balance = 0.00
     this.transactions = []
+    this.statement = 'date || credit || debit || balance \n'
   };
 
   deposit (amount) {
@@ -16,17 +17,29 @@ class Account {
     this.transactions.push(transaction)
   };
 
-  statement () {
-    var state = 'date || credit || debit || balance \n'
+  statementCreate () {
+    this.statement = 'date || credit || debit || balance \n'
     var arrLength = this.transactions.length
+    console.log(this.transactions)
     for (var i = 0; i < arrLength; i++) {
-      var trans = this.transactions[i]
-      if (trans.type === 'credit') {
-        state += trans.date.toLocaleDateString('en-GB') + ' || ' + trans.amount + ' || || ' + trans.balance + '\n'
-      } else if (trans.type === 'debit') {
-        state += trans.date.toLocaleDateString('en-GB') + ' || ' + trans.amount + ' || ' + trans.balance + '\n'
+      if (this.transactions[i].type === 'credit') {
+        this.creditFormat(i);
+      } else if (this.transactions[i].type === 'debit') {
+        this.debitFormat(i);
       };
     };
-    return state
+    return this.statement
+  };
+
+  creditFormat (i) {
+    var txn = this.transactions[i]
+    console.log(this.transactions[i])
+    this.statement += txn.date.toLocaleDateString('en-GB') + ' || ' + txn.amount + ' || || ' + txn.balance + '\n';
+  };
+
+  debitFormat (i) {
+    console.log(this.transactions)
+    var txn = this.transactions[i]
+    this.statement += txn.date.toLocaleDateString('en-GB') + ' || || ' + txn.amount + ' || ' + txn.balance + '\n';
   };
 };
