@@ -20,10 +20,11 @@ class Account {
     var state = "date || credit || debit || balance \n"
     var arrLength = this.transactions.length;
     for (var i = 0; i < arrLength; i ++) {
-      if (this.transactions[i].type === 'credit') {
-        state += 'date || ' + this.transactions[i].amount + ' || || ' + this.transactions[i].balance + '\n'
-      } else if (this.transactions[i].type === 'debit') {
-        state += 'date || ' + this.transactions[i].amount + ' || ' + this.transactions[i].balance + '\n'
+      var trans = this.transactions[i];
+      if (trans.type === 'credit') {
+        state += trans.date.toLocaleDateString('en-GB') + ' || ' + trans.amount + ' || || ' + trans.balance + '\n'
+      } else if (trans.type === 'debit') {
+        state += trans.date.toLocaleDateString('en-GB') + ' || ' + trans.amount + ' || ' + trans.balance + '\n'
       };
     };
     return state;
