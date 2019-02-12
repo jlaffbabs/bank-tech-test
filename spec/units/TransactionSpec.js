@@ -1,2 +1,2 @@
-describe ('Transaction', function () {
-});
+describe('Transaction', function () {
+})
